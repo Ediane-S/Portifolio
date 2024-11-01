@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8d8f2;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    top: 0;
+    padding: 0px 1px 0px;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav-responsiva,
+.nav-responsiva-aberta {
+    display: none;
+}
+
+nav ul {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border-radius: 0px 0px 35px 35px;
+    background-color: #3a2d34;
+    padding: 0px 40px 0px;
+    gap: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #edddec;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nome {
+    color: #fff;
+    font-weight: 900;
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    z-index: 200;
+}
+
+.texto {
+    color: #faf4fa;
+    font-weight: 400;
+    z-index: 10;
+}
+
+.bolinha {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #3a2d34;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover .bolinha {
+    top: 35px;
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 5;
+}
+
+nav ul li a:hover .texto {
+    color: #beaedb;
+}
+
+.primeira-section {
+    padding: 7% 5% 1%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.primeira-section .flex .textos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.texto-apresentacao {
+    font-size: 2.6rem;
+}
+
+.palavra-colorida {
+    color: #75619d;
+}
+
+.textos p {
+    margin-top: 3%;
+    font-size: 1.4rem;
+}
+
+.foto-pessoal {
+    content: "";
+    height: 350px;
+    width: 350px;
+    margin-left: 8%;
+    border-radius: 60px 30px;
+    background-color: violet;
+}
+
+.botoes {
+    margin-top: 12%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    margin-right: 30px;
+    border-radius: 19px;
+    background-color: #3f2a52;
+    color: #faf4fa;
+    box-shadow: 0 0 7px rgb(32, 2, 32);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-branco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    margin-right: 30px;
+    border-radius: 19px;
+    background-color: #faf4fa;
+    color: #3f2a52;
+    box-shadow: 0 0 7px rgb(32, 2, 32);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    height: 45px;
+    width: 110px;
+    border-radius: 29px;
+    background-color: #75619d;
+}
+
+.botao-branco:hover {
+    height: 45px;
+    width: 110px;
+    border-radius: 29px;
+    background-color: #e4d6e4;
+}
+
+.sobre-mim {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: #beaedb;
+    border-radius: 10px;
+}
+
+.sobre-mim-titulo {
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sobre-mim-txt {
+    text-indent: 20px;
+    font-size: 19px;
+}
+
+.container-skills-hobbies {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    /* Adiciona a perspectiva para o efeito 3D */
+}
+
+.skills-hobbies {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+    padding-bottom: 20px;
+    height: 150px;
+    width: 140px;
+    border-radius: 30px 15px;
+    font-size: 25px;
+    background-color: #edddec;
+    box-shadow: inset 0 0 15px rgba(12, 12, 12, 0.5),
+        /* Inner shadow */
+        0 0 10px rgba(12, 12, 12, 0.8);
+    /* Outer shadow */
+    transition: transform 0.5s ease;
+    /* Transição suave para o efeito 3D */
+    transform-style: preserve-3d;
+}
+
+.skills-hobbies:hover {
+    transform: rotateY(20deg) rotateX(10deg);
+    height: 148px;
+    width: 138px;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8),
+        /* Inner shadow mais forte no hover */
+        0 0 15px rgba(77, 23, 94, 0.5);
+    /* Outer shadow mais intensa no hover */
+}
+
+.skills-hobbies i {
+    position: relative;
+    bottom: 22px;
+    left: 30px;
+    font-size: 35px;
+
+}
+
+.skills-hobbies p {
+    margin-top: 70px;
+    font-size: 21px;
+}
+
+.txts-titulo-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.formacao {
+    margin-top: 40px;
+    padding-top: 10px;
+    background-color: #3f2a52;
+    color: #faf4fa;
+    border-radius: 15px;
+}
+
+.container-formacao-card {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.card {
+    content: "";
+    height: 250px;
+    width: 250px;
+    margin: 30px 50px 30px 90px;
+    border-radius: 40px 25px;
+    background-color: white;
+}
+
+.txt-card {
+    margin-left: 70px;
+}
+
+.projeto-container {
+    display: flex;
+}
+
+.projeto {
+    content: "";
+    height: 400px;
+    width: 600px;
+    border-radius: 40px 25px;
+    margin-top: 30px;
+    background-color: violet;
+}
+
+.projeto-txts-buttons {
+    margin: 170px 30px;
+}
+
+.projeto-titulo {
+    margin: 5px 0px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.projeto-container-inverso {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.projeto-inverso {
+    content: "";
+    height: 400px;
+    width: 600px;
+    border-radius: 40px 25px;
+    margin-top: 30px;
+    background-color: violet;
+}
+
+.projeto-txts-buttons-inverso {
+    margin: 170px 30px;
+}
+
+.projeto-titulo-inverso {
+    margin: 5px 0px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contact {
+    background-color: #beaedb;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.img-telefone {
+    content: "";
+    height: 428px;
+    width: 360px;
+    margin-left: 20px;
+    background-color: burlywood;
+    border-radius: 10px;
+}
+
+.contact-me {
+    padding: 10px;
+}
+
+.input {
+    display: block;
+    margin: 13px 0px;
+    height: 40px;
+    width: 600px;
+    background-color: antiquewhite;
+    border-color: #beaedb;
+    border-radius: 10px;
+}
+
+#mensagem {
+    height: 100px;
+    margin-bottom: 24px;
+}
+
+#botao-mensagem {
+    font-size: 12px;
+}
+
+.primeira-section,
+.segunda-section,
+.terceira-section,
+.contact {
+    margin: 0px 40px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7e4f7;
+}
+
+@media (max-width:768px) {
+
+    header {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-radius: 0px 0px 35px 35px;
+        background-color: #3a2d34;
+        padding: 0px 40px 0px;
+        gap: 60px;
+    }
+
+    nav ul {
+        display: none;
+        height: 210px;
+        width: 220px;
+        top: 0px;
+        left: 520px;
+        position: fixed;
+        z-index: 100;
+        background-color: #3a2d34;
+        flex-direction: column;
+        padding-bottom: 20px;
+        gap: 10px;
+    }
+
+    .nav-responsiva {
+        display: block;
+        position: relative;
+        top: 2px;
+        left: 580px;
+        color: #faf4fa;
+        background-color: #3a2d34;
+        border-style: none;
+    }
+
+    .nav-responsiva-aberta {
+        display: none;
+        position: relative;
+        top: 2px;
+        left: 507px;
+        z-index: 210;
+        color: #75619d;
+        background-color: #3a2d34;
+        border-style: none;
+    }
+
+    .bolinha {
+        display: none;
+    }
+
+    .flex {
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .primeira-section .flex .textos {
+        width: 100%;
+    }
+
+    .foto-pessoal {
+        margin: 25px 0 0 0;
+    }
+
+    .projeto-container,
+    .projeto-container-inverso {
+        display: block;
+    }
+
+    .projeto-txts-buttons,
+    .projeto-txts-buttons-inverso {
+        margin: 20px 10px;
+    }
+
+    .card {
+        height: 150px;
+        width: 150px;
+        margin: 10px 30px 10px 50px;
+        border-radius: 40px 25px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .botoes {
+        margin-top: 2%;
+    }
+
+    .botao,
+    .botao-branco {
+        width: 100px;
+        margin: 10px 10px;
+    }
+
+    .botao-branco:hover,
+    .botao:hover {
+        height: 42px;
+        width: 102px;
+    }
+
+    .projeto,
+    .projeto-inverso {
+        width: 100%;
+    }
+}
+
+@media (max-width:360px) {
+
+    header {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-radius: 0px 0px 35px 35px;
+        background-color: #3a2d34;
+        padding: 0px 10px 0px;
+    }
+
+    nav ul {
+        display: none;
+        height: 160px;
+        width: 150px;
+        top: 0px;
+        left: 200px;
+        position: fixed;
+        z-index: 100;
+        background-color: #3a2d34;
+        flex-direction: column;
+        gap: 0px;
+        margin: 40px 0px;
+    }
+
+    .texto {
+        margin: 4px;
+    }
+
+    #email {
+        display: none;
+    }
+
+    #sobre-mim-id {
+        padding-left: 15px;
+    }
+
+    .nav-responsiva {
+        display: block;
+        position: relative;
+        top: 2px;
+        left: 263px;
+        color: #faf4fa;
+        background-color: #3a2d34;
+        border-style: none;
+    }
+
+    .nav-responsiva-aberta {
+        display: none;
+        position: relative;
+        top: 2px;
+        left: 190px;
+        z-index: 210;
+        color: #75619d;
+        background-color: #3a2d34;
+        border-style: none;
+    }
+
+    .bolinha {
+        display: none;
+    }
+
+    .primeira-section,
+    .segunda-section,
+    .terceira-section,
+    .contact {
+        padding: 0% 0% 0%;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .texto-apresentacao {
+        font-size: 1.7rem;
+    }
+
+    .textos p {
+        font-size: 1.2rem;
+    }
+
+    .foto-pessoal {
+        height: 270px;
+        width: 280px;
+    }
+
+    .botoes {
+        font-size: 13px;
+        margin-top: 8%;
+    }
+
+    .botao,
+    .botao-branco {
+        height: 40px;
+        width: 80px;
+    }
+
+    .container-skills-hobbies {
+        flex-wrap: wrap;
+    }
+
+    .skills-hobbies {
+        margin: 10px;
+        padding-bottom: 10px;
+        height: 130px;
+        width: 120px;
+    }
+
+    .skills-hobbies p {
+        font-size: 19px;
+    }
+
+    .container-formacao-card {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 10px 90px 10px 84px;
+    }
+
+    .projeto,
+    .projeto-inverso {
+        height: 200px;
+        width: 320px;
+    }
+
+    .contact {
+        display: grid;
+    }
+
+    .img-telefone {
+        height: 160px;
+        width: 150px;
+        margin-top: 20px;
+        margin-left: 90px;
+    }
+
+}
