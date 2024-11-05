@@ -499,6 +499,81 @@ footer {
     }
 }
 
+@media (max-width:600px) {
+
+    nav ul {
+        top: 0px;
+        left: 63%;
+        margin: 10px 0px;
+    }
+
+    .nav-responsiva {
+        top: 2px;
+        left: 85%;
+    }
+
+    .nav-responsiva-aberta {
+        top: 2px;
+        left: 70.9%;
+    }
+
+    .card {
+        margin: 10px 10px 10px 15px;
+    }
+
+    .txt-card {
+        margin-left: 10px;
+    }
+
+    .skills-hobbies {
+        margin: 10px;
+        padding-bottom: 10px;
+        height: 130px;
+        width: 120px;
+    }
+
+    .skills-hobbies p {
+        margin-top: 70px;
+        font-size: 21px;
+    }
+
+
+}
+
+@media (max-width:400px) {
+
+    .container-skills-hobbies {
+        flex-wrap: wrap;
+    }
+
+    .container-formacao-card {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 10px 90px 10px 84px;
+    }
+
+    .projeto,
+    .projeto-inverso {
+        height: 200px;
+        width: 320px;
+    }
+
+    .contact {
+        display: grid;
+    }
+
+    .img-telefone {
+        height: 160px;
+        width: 150px;
+        margin-top: 20px;
+        margin-left: 45px;
+    }
+
+
+}
+
 @media (max-width:360px) {
 
     header {
