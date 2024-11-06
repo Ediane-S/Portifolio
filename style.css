@@ -493,30 +493,7 @@ footer {
         width: 102px;
     }
 
-    .projeto,
-    .projeto-inverso {
-        width: 100%;
-    }
-}
-
-@media (max-width:600px) {
-
-    nav ul {
-        top: 0px;
-        left: 63%;
-        margin: 10px 0px;
-    }
-
-    .nav-responsiva {
-        top: 2px;
-        left: 85%;
-    }
-
-    .nav-responsiva-aberta {
-        top: 2px;
-        left: 70.9%;
-    }
-
+    
     .card {
         margin: 10px 10px 10px 15px;
     }
@@ -540,7 +517,29 @@ footer {
 
 }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
+
+    .projeto,
+    .projeto-inverso {
+        width: 100%;
+    }
+
+    nav ul {
+        top: 0px;
+        left: 63%;
+        margin: 10px 0px;
+    }
+
+    .nav-responsiva {
+        top: 2px;
+        left: 85%;
+    }
+
+    .nav-responsiva-aberta {
+        top: 2px;
+        left: 70.9%;
+    }
+
 
     .container-skills-hobbies {
         flex-wrap: wrap;
